@@ -6,6 +6,7 @@ import { Terminal, MessageSquare, Code, Shield, Infinity, Zap, Cpu } from "lucid
 import Navigation from "@/components/Navigation";
 import ThreeHero from "@/components/ThreeHero";
 import ScenarioCard from "@/components/ScenarioCard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -52,7 +53,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="flex justify-center gap-6"
           >
-            <a href="#download" className="bg-white text-black px-12 py-5 rounded-full font-black text-xl hover:bg-accent-green hover:scale-105 transition-all duration-300">
+            <a href="/download" className="bg-white text-black px-12 py-5 rounded-full font-black text-xl hover:bg-accent-green hover:scale-105 transition-all duration-300">
               Get Started
             </a>
           </motion.div>
@@ -183,33 +184,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Download Section */}
-      <section id="download" className="py-48 px-6 bg-black text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-accent-green/5 blur-[120px] rounded-full translate-y-2/3"></div>
-        <div className="relative z-10">
-          <h2 className="text-[clamp(4rem,15vw,180px)] font-black tracking-tighter leading-[0.8] mb-20 italic">
-            Join the<br />Revolution.
-          </h2>
-
-          <div className="flex flex-col md:flex-row gap-8 justify-center">
-            <a href="#" className="bg-white text-black px-16 py-6 rounded-full font-black text-2xl hover:scale-110 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.2)]">
-              Download for Mac
-            </a>
-            <a href="#" className="border-2 border-white/20 text-white px-16 py-6 rounded-full font-black text-2xl hover:bg-white/10 transition-all">
-              Download for Windows
-            </a>
-          </div>
-
-          <div className="mt-48 flex flex-col items-center gap-12 pt-12 border-t border-white/5">
-            <div className="flex gap-12 text-sm font-bold text-gray-500 uppercase tracking-widest">
-              <a href="#" className="hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="hover:text-white transition-colors">GitHub</a>
-              <a href="#" className="hover:text-white transition-colors">Discord</a>
-            </div>
-            <p className="text-[10px] text-gray-600 font-bold uppercase tracking-widest tracking-loose">© 2024 DORA INTELLIGENCE INC. THE FUTURE IS LOCAL.</p>
-          </div>
-        </div>
-      </section>
+      <Footer />
     </main>
   );
 }

@@ -56,7 +56,7 @@ const Navigation = () => {
 
                 <div>
                     <Link
-                        href="#download"
+                        href="/download"
                         className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold hover:bg-accent-green transition-all duration-300"
                     >
                         Get Started

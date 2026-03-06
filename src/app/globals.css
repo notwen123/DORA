@@ -2,13 +2,13 @@
 
 @theme inline {
   --font-sans: "Inter", var(--font-geist-sans);
-  
+
   --color-apple-black: #000000;
   --color-apple-gray: #1d1d1f;
   --color-apple-silver: #f5f5f7;
   --color-apple-blue: #0066cc;
   --color-accent-green: #0df259;
-  
+
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
@@ -35,13 +35,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #000;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
 }
@@ -50,4 +53,26 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
