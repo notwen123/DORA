@@ -26,7 +26,7 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-apple-blue font-bold uppercase tracking-[0.4em] mb-6 text-sm"
           >
-            The Cinematic Standard
+            The Autonomous Intelligence That Acts.
           </motion.p>
 
           <motion.h1
@@ -148,9 +148,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Tech Section replaced by Cinematic StickyBrain */}
+      {/* The 100vh Cinematic Hero Section */}
       <StickyBrain />
-
 
       <Footer />
     </main>

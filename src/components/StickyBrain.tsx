@@ -1,71 +1,99 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import React from "react";
+import { motion } from "framer-motion";
 
 export const StickyBrain = () => {
-    const sectionRef = useRef<HTMLElement>(null);
+    // We animate the items in sequentially when the section hits the viewport
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.5 // Slower stagger for more pronounced "one by one" effect
+            }
+        }
+    };
 
-    // We track scroll progress through this entire section length
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start start", "end end"]
-    });
-
-    // Slower, smoother trigger timings (200vh total height)
-    // The text will stay on screen longer and fade more gradually.
-    const text1Opacity = useTransform(scrollYProgress, [0, 0.1, 0.35, 0.45], [0, 1, 1, 0]);
-    const text2Opacity = useTransform(scrollYProgress, [0.35, 0.45, 0.7, 0.8], [0, 1, 1, 0]);
-    const text3Opacity = useTransform(scrollYProgress, [0.7, 0.8, 0.95, 1], [0, 1, 1, 0]);
-
-    // Orb scales up, rotates, and fades out beautifully right at the end to avoid blank space
-    const brainScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1.1, 0.9]);
-    const brainRotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
-    const brainOpacity = useTransform(scrollYProgress, [0.85, 1], [1, 0]);
+    const item: any = {
+        hidden: { opacity: 0, y: 80 }, // Start further down for a larger float-up
+        show: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
+    };
 
     return (
-        <section ref={sectionRef} className="relative h-[200vh] bg-black w-full">
+        <section className="relative h-screen min-h-[800px] bg-black text-white w-full overflow-hidden flex items-center">
+            <div className="w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
 
-            {/* The Sticky Container */}
-            <div className="sticky top-0 h-screen w-full overflow-hidden">
+                {/* Background ambient glow behind orb */}
+                <div className="absolute inset-0 z-0 bg-mesh-dark opacity-30 pointer-events-none"></div>
 
-                {/* mesh gradient background */}
-                <div className="absolute inset-0 bg-mesh-dark opacity-50"></div>
-
-                {/* Central 3D Orb Asset (Image Fallback) */}
+                {/* Left Side: Staggered Text Stack */}
                 <motion.div
-                    style={{ scale: brainScale, rotate: brainRotate, opacity: brainOpacity }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] h-[300px] md:w-[600px] md:h-[600px]"
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="relative z-20 w-full md:w-1/2 flex flex-col justify-center space-y-12 md:space-y-16 py-12 border-l-2 border-white/10 pl-8 md:pl-16"
                 >
-                    <div className="relative w-full h-full animate-[pulse_6s_ease-in-out_infinite]">
-                        <img
-                            src="/3d_images/orb.png"
-                            alt="DORA Intelligence Core"
-                            className="w-full h-full object-contain pointer-events-none drop-shadow-[0_0_60px_rgba(0,102,204,0.4)]"
-                        />
-                    </div>
+
+                    {/* Item 1 */}
+                    <motion.div variants={item} className="pr-6">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9] mb-4">
+                            Understand<br />
+                            <span className="text-gray-500">Everything.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
+                            DORA processes your entire context locally. No cloud. No latency.
+                        </p>
+                    </motion.div>
+
+                    {/* Item 2 */}
+                    <motion.div variants={item} className="pr-6">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9] mb-4">
+                            Reason<br />
+                            <span className="text-accent-green">Faster.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
+                            Leveraging 4-bit quantization for 60+ tokens/sec on consumer hardware.
+                        </p>
+                    </motion.div>
+
+                    {/* Item 3 */}
+                    <motion.div variants={item} className="pr-6">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9] mb-4">
+                            Execute<br />
+                            <span className="text-apple-blue">Perfectly.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
+                            Terminal integration and script execution turn thought into action instantly.
+                        </p>
+                    </motion.div>
+
                 </motion.div>
 
-                {/* Story/Text Layers */}
-                <div className="absolute inset-0 z-20 w-full max-w-7xl mx-auto px-6 pointer-events-none">
-
-                    <motion.div style={{ opacity: text1Opacity }} className="absolute top-1/2 -translate-y-1/2 left-6 md:left-20">
-                        <h2 className="text-cinematic-header text-white">Understand.<br /><span className="text-gray-500">Everything.</span></h2>
-                        <p className="mt-6 text-xl text-gray-400 max-w-md">DORA processes your entire context locally. No cloud. No latency.</p>
+                {/* Right Side: The Orb */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="relative z-10 w-full md:w-1/2 flex items-center justify-center mt-12 md:mt-0"
+                >
+                    <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                        className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px]"
+                    >
+                        <div className="absolute inset-0 animate-pulse-slow">
+                            <img
+                                src="/3d_images/orb.png"
+                                alt="DORA Core"
+                                className="w-full h-full object-contain pointer-events-none drop-shadow-[0_0_80px_rgba(0,102,204,0.6)]"
+                            />
+                        </div>
                     </motion.div>
+                </motion.div>
 
-                    <motion.div style={{ opacity: text2Opacity }} className="absolute top-1/2 -translate-y-1/2 right-6 md:right-20 text-right w-full md:w-auto">
-                        <h2 className="text-cinematic-header text-white">Reason.<br /><span className="text-accent-green">Faster.</span></h2>
-                        <p className="mt-6 text-xl text-gray-400 max-w-md ml-auto">Leveraging Mistral-Small at 4-bit quantization for 60+ tokens/sec on consumer hardware.</p>
-                    </motion.div>
-
-                    <motion.div style={{ opacity: text3Opacity }} className="absolute top-1/2 -translate-y-1/2 left-6 md:left-20">
-                        <h2 className="text-cinematic-header text-white">Execute.<br /><span className="text-apple-blue">Perfectly.</span></h2>
-                        <p className="mt-6 text-xl text-gray-400 max-w-md">Terminal integration. Script execution. DORA bridges the gap between thought and action.</p>
-                    </motion.div>
-
-                </div>
             </div>
         </section>
     );
