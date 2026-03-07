@@ -74,9 +74,10 @@ export default function Home() {
       <section id="scenarios" className="py-32 px-6 bg-white text-black rounded-[4rem] -mt-10 relative z-10 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="mb-32 text-center md:text-left"
           >
             <h2 className="text-3xl font-bold text-gray-400 mb-4">Capabilities</h2>
@@ -150,7 +151,13 @@ export default function Home() {
       {/* Tech Section */}
       <section id="tech" className="py-32 px-6 bg-white text-black border-t border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-20 items-end mb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col lg:flex-row gap-20 items-end mb-32"
+          >
             <div className="lg:w-2/3">
               <h2 className="text-lg font-bold text-gray-400 mb-4 uppercase tracking-[0.2em]">Architecture</h2>
               <h3 className="text-[clamp(3.5rem,10vw,110px)] font-black tracking-tighter leading-[0.85]">
@@ -162,7 +169,7 @@ export default function Home() {
                 Optimized for consumer hardware. Mistral-Small running at 4-bit quantization, delivering 60+ tokens/sec with 300ms latency.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             <div className="flex flex-col gap-6">
