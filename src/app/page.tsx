@@ -94,6 +94,7 @@ export default function Home() {
               subtitle="Extract critical action items from noise. DORA handles the triage, you handle the work."
               icon={<MessageSquare className="text-blue-500 w-8 h-8" />}
               className="bg-apple-silver"
+              image="/3d_images/xl.png"
             />
             <ScenarioCard
               tag="In your code"

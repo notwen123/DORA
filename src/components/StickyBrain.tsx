@@ -2,18 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import dynamic from "next/dynamic";
-
-// Force the 3D Canvas to only render on the client side to avoid Next.js SSR crashes
-const Scene = dynamic(() => import("./StickyBrainScene"), {
-    ssr: false,
-    loading: () => (
-        <div className="w-full h-full flex flex-col items-center justify-center border border-white/10 glass-panel rounded-full shadow-[0_0_100px_rgba(0,102,204,0.2)]">
-            <div className="text-white/30 text-xs font-bold tracking-widest uppercase mb-2">Loading 3D Engine</div>
-            <div className="w-8 h-8 rounded-full border-t-2 border-apple-blue animate-spin"></div>
-        </div>
-    )
-});
+import Image from "next/image";
 
 export const StickyBrain = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -41,12 +30,18 @@ export const StickyBrain = () => {
                 {/* mesh gradient background */}
                 <div className="absolute inset-0 bg-mesh-dark opacity-50"></div>
 
-                {/* Central 3D Orb Asset */}
+                {/* Central 3D Orb Asset (Image Fallback) */}
                 <motion.div
                     style={{ scale: brainScale, rotate: brainRotate }}
-                    className="absolute z-10 w-96 h-96 md:w-[500px] md:h-[500px]"
+                    className="absolute z-10 w-[300px] h-[300px] md:w-[600px] md:h-[600px]"
                 >
-                    <Scene />
+                    <div className="relative w-full h-full animate-[pulse_6s_ease-in-out_infinite]">
+                        <img
+                            src="/3d_images/orb.png"
+                            alt="DORA Intelligence Core"
+                            className="w-full h-full object-contain pointer-events-none drop-shadow-[0_0_60px_rgba(0,102,204,0.4)]"
+                        />
+                    </div>
                 </motion.div>
 
                 {/* Story/Text Layers */}
