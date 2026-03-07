@@ -65,7 +65,7 @@ export const StickyBrain = () => {
                             <span className="text-apple-blue">Perfectly.</span>
                         </h2>
                         <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
-                            Terminal integration and script execution turn thought into action instantly.
+                            Voice-to-Action pipeline and 40+ app integrations turn intent into action instantly.
                         </p>
                     </motion.div>
 

@@ -21,10 +21,10 @@ export default function DownloadPage() {
                 >
                     <div className="absolute inset-x-0 top-0 h-64 bg-accent-green/20 blur-[100px] -z-10 rounded-full"></div>
                     <h1 className="text-[clamp(3rem,12vw,140px)] font-black tracking-tighter leading-[0.85] mb-8">
-                        Get the<br />Revolution.
+                        Get DORA<br />for Desktop.
                     </h1>
                     <p className="text-xl md:text-3xl text-gray-400 font-medium max-w-3xl mx-auto leading-tight">
-                        Powerful intelligence, now available for your desktop. Experience the future of interaction, locally.
+                        The world's most advanced autonomous desktop assistant, running 100% locally on your machine.
                     </p>
                 </motion.div>
             </section>
@@ -41,11 +41,11 @@ export default function DownloadPage() {
                     </div>
                     <div>
                         <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Engine</h5>
-                        <p className="text-3xl font-black italic">MISTRAL.v3</p>
+                        <p className="text-3xl font-black italic">DORA Core</p>
                     </div>
                     <div>
                         <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Privacy Level</h5>
-                        <p className="text-3xl font-black text-accent-green">P2P-LOCAL</p>
+                        <p className="text-3xl font-black text-accent-green">100% On-Device</p>
                     </div>
                     <div>
                         <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Build Hash</h5>

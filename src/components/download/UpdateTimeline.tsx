@@ -7,9 +7,9 @@ import { ChevronRight, Circle, CheckCircle2 } from "lucide-react";
 const events = [
     {
         version: "v1.2.4 (Current)",
-        title: "The Intelligence Update",
+        title: "The Voice-to-Action Update",
         date: "Mar 2024",
-        description: "Launched local-first reasoning with Mistral integration and terminal execution core.",
+        description: "Launched the seamless desktop widget with real-time transcription and autonomous app execution.",
         status: "released",
     },
     {
@@ -63,7 +63,7 @@ const UpdateTimeline = () => {
                             </span>
                             <h4 className="text-2xl font-black tracking-tight">{event.title}</h4>
                             <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded border ${event.status === "released" ? "border-accent-green/30 text-accent-green" :
-                                    event.status === "active" ? "border-apple-blue/30 text-apple-blue" : "border-gray-800 text-gray-600"
+                                event.status === "active" ? "border-apple-blue/30 text-apple-blue" : "border-gray-800 text-gray-600"
                                 }`}>
                                 {event.version}
                             </span>

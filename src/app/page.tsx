@@ -9,6 +9,7 @@ import ScenarioCard from "@/components/ScenarioCard";
 import Footer from "@/components/Footer";
 import { CinematicFrame } from "@/components/CinematicFrame";
 import { StickyBrain } from "@/components/StickyBrain";
+import { LovableHowItWorks } from "@/components/LovableHowItWorks";
 
 export default function Home() {
   return (
@@ -96,16 +97,16 @@ export default function Home() {
               className="bg-apple-silver"
             />
             <ScenarioCard
-              tag="In your code"
-              title='"DORA, find where X is defined."'
-              subtitle="Universal semantic search across all your local files and git repositories. Fast. Private. Precise."
+              tag="In your files"
+              title='"DORA, find the Q3 revenue report."'
+              subtitle="Universal semantic search across all your local files and documents. Fast. Private. Precise."
               icon={<Code className="text-gray-800 w-8 h-8" />}
               dark
             />
             <ScenarioCard
-              tag="Across your tools"
-              title='"DORA, build and deploy the gateway."'
-              subtitle="From terminal execution to cloud staging. DORA bridges the gap between intent and action."
+              tag="Across your apps"
+              title='"DORA, schedule a team sync for tomorrow at 2."'
+              subtitle="DORA integrates with 40+ platforms to bridge the gap between intent and action seamlessly."
               icon={<Terminal className="text-accent-green w-8 h-8" />}
               className="col-span-1 md:col-span-2 bg-black text-white"
               dark
@@ -121,11 +122,10 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-4xl"
+          className="w-full max-w-4xl flex flex-col items-center"
         >
-          <Shield className="text-apple-blue w-16 h-16 mx-auto mb-10" />
-          <h2 className="text-[clamp(2.5rem,8vw,90px)] font-black tracking-tighter mb-10 leading-[0.9]">
-            The most private<br />digital assistant.
+          <h2 className="text-[clamp(2.5rem,8vw,90px)] font-black tracking-tighter mb-16 leading-[0.9]">
+            DORA <br /> MOST PRIVATE DIGITAL ASSISTANT
           </h2>
           <p className="text-xl md:text-3xl text-gray-400 font-medium leading-relaxed max-w-4xl mx-auto mb-16">
             Your data learns who you are. Not who we are. DORA runs 100% locally on your machine, using your GPU to think. Your audio, your text, and your files never leave your device. Period.
@@ -150,6 +150,9 @@ export default function Home() {
 
       {/* The 100vh Cinematic Hero Section */}
       <StickyBrain />
+
+      {/* The Lovable Terminal Workflow */}
+      <LovableHowItWorks />
 
       <Footer />
     </main>

@@ -80,8 +80,8 @@ const DownloadButtons = () => {
 
                         <div className="mt-auto w-full space-y-4">
                             <button className={cn(
-                                "w-full py-4 rounded-full font-black flex items-center justify-center gap-2 transition-all active:scale-95",
-                                item.recommended ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-accent-green"
+                                "w-full py-4 rounded-full font-black flex items-center justify-center gap-2 transition-all active:scale-95 duration-300",
+                                item.recommended ? "bg-black text-white hover:bg-accent-green hover:text-black" : "bg-white text-black hover:bg-accent-green hover:text-black"
                             )}>
                                 <Download className="w-5 h-5" />
                                 Download
