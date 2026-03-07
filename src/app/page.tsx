@@ -7,6 +7,8 @@ import Navigation from "@/components/Navigation";
 import ThreeHero from "@/components/ThreeHero";
 import ScenarioCard from "@/components/ScenarioCard";
 import Footer from "@/components/Footer";
+import { CinematicFrame } from "@/components/CinematicFrame";
+import { StickyBrain } from "@/components/StickyBrain";
 
 export default function Home() {
   return (
@@ -14,27 +16,26 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section id="overview" className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+      <CinematicFrame className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         <ThreeHero />
 
-        <div className="relative z-10 max-w-5xl mx-auto">
+        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-gray-400 font-bold uppercase tracking-[0.4em] mb-6 text-sm"
+            className="text-apple-blue font-bold uppercase tracking-[0.4em] mb-6 text-sm"
           >
-            Introducing Intelligence that Acts.
+            The Cinematic Standard
           </motion.p>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[clamp(3.5rem,15vw,160px)] font-black tracking-tighter leading-[0.85] mb-8"
+            initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            className="text-cinematic-hero text-white mb-8"
           >
             DORA<br />
-            <span className="text-ai-gradient"></span>
           </motion.h1>
 
           <motion.p
@@ -43,8 +44,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-xl md:text-3xl text-gray-400 max-w-4xl mx-auto font-medium leading-tight mb-12"
           >
-            Built for execution. Optimized for privacy.<br />
-            The world's first truly autonomous desktop assistant.
+            A private, autonomous intelligence designed to live on your machine.
           </motion.p>
 
           <motion.div
@@ -53,7 +53,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="flex justify-center gap-6"
           >
-            <a href="/download" className="bg-white text-black px-12 py-5 rounded-full font-black text-xl hover:bg-accent-green hover:scale-105 transition-all duration-300">
+            <a href="/download" className="bg-white text-black px-12 py-5 rounded-full font-black text-xl hover:bg-accent-green hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
               Get Started
             </a>
           </motion.div>
@@ -68,10 +68,10 @@ export default function Home() {
         >
           <div className="w-[1px] h-16 bg-gradient-to-b from-white/50 to-transparent"></div>
         </motion.div>
-      </section>
+      </CinematicFrame>
 
       {/* Scenarios Section */}
-      <section id="scenarios" className="py-32 px-6 bg-white text-black rounded-[4rem] -mt-10 relative z-10 transition-colors">
+      <CinematicFrame className="py-32 px-6 bg-white text-black rounded-[4rem] -mt-10 relative z-10 transition-colors">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -112,7 +112,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </CinematicFrame>
 
       {/* Privacy Section */}
       <section id="privacy" className="py-48 px-6 bg-black flex flex-col items-center text-center">
@@ -148,48 +148,9 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Tech Section */}
-      <section id="tech" className="py-32 px-6 bg-white text-black border-t border-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col lg:flex-row gap-20 items-end mb-32"
-          >
-            <div className="lg:w-2/3">
-              <h2 className="text-lg font-bold text-gray-400 mb-4 uppercase tracking-[0.2em]">Architecture</h2>
-              <h3 className="text-[clamp(3.5rem,10vw,110px)] font-black tracking-tighter leading-[0.85]">
-                Engineered <br />for performance.
-              </h3>
-            </div>
-            <div className="lg:w-1/3">
-              <p className="text-xl text-gray-500 font-medium leading-relaxed">
-                Optimized for consumer hardware. Mistral-Small running at 4-bit quantization, delivering 60+ tokens/sec with 300ms latency.
-              </p>
-            </div>
-          </motion.div>
+      {/* Tech Section replaced by Cinematic StickyBrain */}
+      <StickyBrain />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div className="flex flex-col gap-6">
-              <Cpu className="w-10 h-10 text-gray-400" />
-              <h4 className="text-2xl font-black tracking-tight">The Brain</h4>
-              <p className="text-gray-500 font-medium leading-relaxed">Python reasoning core connecting to local Ollama nodes. Complex intent orchestration in real-time.</p>
-            </div>
-            <div className="flex flex-col gap-6">
-              <Infinity className="w-10 h-10 text-gray-400" />
-              <h4 className="text-2xl font-black tracking-tight">The Bridge</h4>
-              <p className="text-gray-500 font-medium leading-relaxed">High-frequency WebSocket event bus. Ensuring zero-latency handshakes between reasoning and action.</p>
-            </div>
-            <div className="flex flex-col gap-6">
-              <Zap className="w-10 h-10 text-gray-400" />
-              <h4 className="text-2xl font-black tracking-tight">The Hands</h4>
-              <p className="text-gray-500 font-medium leading-relaxed">Native TypeScript execution driver. Integrating with MacOS/WSL/Linux system APIs for platform-wide action.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

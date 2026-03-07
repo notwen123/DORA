@@ -76,3 +76,29 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* Cinematic Utilities */
+.text-cinematic-hero {
+  font-size: clamp(4rem, 15vw, 160px);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+}
+
+.text-cinematic-header {
+  font-size: clamp(3rem, 10vw, 100px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+.bg-mesh-dark {
+  background: radial-gradient(circle at 50% 50%, rgba(26, 26, 46, 0.4) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

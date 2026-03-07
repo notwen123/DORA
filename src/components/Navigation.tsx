@@ -26,7 +26,7 @@ const Navigation = () => {
                 className={cn(
                     "max-w-7xl w-full flex items-center justify-between transition-all duration-500 px-8 py-3",
                     scrolled
-                        ? "bg-black/70 backdrop-blur-2xl border border-white/10 rounded-full"
+                        ? "glass-panel rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
                         : "bg-transparent"
                 )}
             >
