@@ -9,7 +9,7 @@ const Footer = () => {
         {
             title: "Product",
             links: [
-                { name: "Intelligence", href: "#overview" },
+                { name: "Intelligence", href: "#tech" },
                 { name: "Scenarios", href: "#scenarios" },
                 { name: "Privacy", href: "#privacy" },
                 { name: "Global Hub", href: "/download" },
@@ -48,7 +48,7 @@ const Footer = () => {
                             <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
                                 <span className="text-black font-black text-2xl">D</span>
                             </div>
-                            <span className="text-2xl font-black tracking-tighter text-white uppercase">Dora Intelligence</span>
+                            <span className="text-2xl font-black tracking-tighter text-white uppercase">DORA Intelligence</span>
                         </div>
                         <p className="text-lg text-gray-500 font-medium max-w-sm leading-relaxed">
                             Transforming human-computer interaction through local-first, autonomous reasoning. The future is personal, private, and powerful.

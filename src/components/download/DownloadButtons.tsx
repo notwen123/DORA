@@ -60,7 +60,7 @@ const DownloadButtons = () => {
                             "relative rounded-[2.5rem] p-10 flex flex-col items-center text-center transition-all duration-500",
                             item.recommended
                                 ? "bg-white text-black scale-105 shadow-[0_20px_50px_rgba(255,255,255,0.1)] z-10"
-                                : "bg-apple-gray text-white border border-white/5 opacity-80 hover:opacity-100"
+                                : "bg-zinc-900 text-white border border-white/5 opacity-80 hover:opacity-100"
                         )}
                     >
                         {item.recommended && (

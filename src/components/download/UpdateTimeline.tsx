@@ -53,7 +53,7 @@ const UpdateTimeline = () => {
                             {event.status === "released" ? (
                                 <CheckCircle2 className="w-8 h-8 text-orange-500" />
                             ) : (
-                                <Circle className={`w-8 h-8 ${event.status === "active" ? "text-apple-blue animate-pulse" : "text-gray-700"}`} strokeWidth={3} />
+                                <Circle className={`w-8 h-8 ${event.status === "active" ? "text-orange-500 animate-pulse" : "text-gray-700"}`} strokeWidth={3} />
                             )}
                         </div>
 
@@ -63,7 +63,7 @@ const UpdateTimeline = () => {
                             </span>
                             <h4 className="text-2xl font-black tracking-tight">{event.title}</h4>
                             <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded border ${event.status === "released" ? "border-orange-500/30 text-orange-500" :
-                                event.status === "active" ? "border-apple-blue/30 text-apple-blue" : "border-gray-800 text-gray-600"
+                                event.status === "active" ? "border-orange-500/30 text-orange-500" : "border-gray-800 text-gray-600"
                                 }`}>
                                 {event.version}
                             </span>
@@ -78,7 +78,7 @@ const UpdateTimeline = () => {
 
             <motion.button
                 whileHover={{ x: 10 }}
-                className="mt-20 flex items-center gap-2 text-apple-blue font-bold text-lg"
+                className="mt-20 flex items-center gap-2 text-orange-500 font-bold text-lg"
             >
                 View Full Changelog <ChevronRight className="w-5 h-5" />
             </motion.button>
