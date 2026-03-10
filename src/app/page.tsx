@@ -1,19 +1,31 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Terminal, MessageSquare, Code, Shield, Infinity, Zap, Cpu } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import ThreeHero from "@/components/ThreeHero";
-import ScenarioCard from "@/components/ScenarioCard";
+import ParallaxFeatures from "@/components/ParallaxFeatures";
 import Footer from "@/components/Footer";
 import { CinematicFrame } from "@/components/CinematicFrame";
 import { StickyBrain } from "@/components/StickyBrain";
 import { LovableHowItWorks } from "@/components/LovableHowItWorks";
+import TrailerLoader from "@/components/TrailerLoader";
+import { ScribbleUnderline } from "@/components/ScribbleUnderline";
 
 export default function Home() {
+  const [hasLoaded, setHasLoaded] = useState(false);
+
   return (
     <main className="relative min-h-screen bg-black overflow-x-hidden">
+
+      {/* THE MERGE & REVEAL LOADER */}
+      <AnimatePresence mode="wait">
+        {!hasLoaded && (
+          <TrailerLoader onComplete={() => setHasLoaded(true)} />
+        )}
+      </AnimatePresence>
+
       <Navigation />
 
       {/* Hero Section */}
@@ -71,49 +83,8 @@ export default function Home() {
         </motion.div>
       </CinematicFrame>
 
-      {/* Scenarios Section */}
-      <CinematicFrame className="py-32 px-6 bg-white text-black rounded-[4rem] -mt-10 relative z-10 transition-colors">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-32 text-center md:text-left"
-          >
-            <h2 className="text-3xl font-bold text-gray-400 mb-4">Capabilities</h2>
-            <h3 className="text-[clamp(3rem,10vw,120px)] font-black tracking-tighter leading-none">
-              Intelligence<br />
-              <span className="text-gray-300">on the move.</span>
-            </h3>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <ScenarioCard
-              tag="At your desk"
-              title='"DORA, summarize my Slack messages."'
-              subtitle="Extract critical action items from noise. DORA handles the triage, you handle the work."
-              icon={<MessageSquare className="text-blue-500 w-8 h-8" />}
-              className="bg-apple-silver"
-            />
-            <ScenarioCard
-              tag="In your files"
-              title='"DORA, find the Q3 revenue report."'
-              subtitle="Universal semantic search across all your local files and documents. Fast. Private. Precise."
-              icon={<Code className="text-gray-800 w-8 h-8" />}
-              dark
-            />
-            <ScenarioCard
-              tag="Across your apps"
-              title='"DORA, schedule a team sync for tomorrow at 2."'
-              subtitle="DORA integrates with 40+ platforms to bridge the gap between intent and action seamlessly."
-              icon={<Terminal className="text-accent-green w-8 h-8" />}
-              className="col-span-1 md:col-span-2 bg-black text-white"
-              dark
-            />
-          </div>
-        </div>
-      </CinematicFrame>
+      {/* CadPay-Inspired Parallax Glass Scenarios */}
+      <ParallaxFeatures />
 
       {/* Privacy Section */}
       <section id="privacy" className="py-48 px-6 bg-black flex flex-col items-center text-center">
@@ -125,7 +96,7 @@ export default function Home() {
           className="w-full max-w-4xl flex flex-col items-center"
         >
           <h2 className="text-[clamp(2.5rem,8vw,90px)] font-black tracking-tighter mb-16 leading-[0.9]">
-            DORA <br /> MOST PRIVATE DIGITAL ASSISTANT
+            DORA <br /> MOST <ScribbleUnderline className="text-white">PRIVATE</ScribbleUnderline> DIGITAL ASSISTANT
           </h2>
           <p className="text-xl md:text-3xl text-gray-400 font-medium leading-relaxed max-w-4xl mx-auto mb-16">
             Your data learns who you are. Not who we are. DORA runs 100% locally on your machine, using your GPU to think. Your audio, your text, and your files never leave your device. Period.
@@ -155,6 +126,6 @@ export default function Home() {
       <LovableHowItWorks />
 
       <Footer />
-    </main>
+    </main >
   );
 }
