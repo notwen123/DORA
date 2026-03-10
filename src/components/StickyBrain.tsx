@@ -51,7 +51,7 @@ export const StickyBrain = () => {
                     <motion.div variants={item} className="pr-6">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9] mb-4">
                             Reason<br />
-                            <span className="text-accent-green">Faster.</span>
+                            <span className="text-orange-500">Faster.</span>
                         </h2>
                         <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
                             Leveraging 4-bit quantization for 60+ tokens/sec on consumer hardware.

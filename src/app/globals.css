@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: "Inter", var(--font-geist-sans);
+  --font-sans: var(--font-geist-sans), "Inter", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 
   --color-apple-black: #000000;
   --color-apple-gray: #1d1d1f;
   --color-apple-silver: #f5f5f7;
   --color-apple-blue: #0066cc;
-  --color-accent-green: #0df259;
+  --color-accent-green: #f97316;
+  /* Replaced with CadPay Orange for full conversion */
 
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -31,22 +33,32 @@ body {
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar (CadPay Style) */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: #000000;
+  border-left: 1px solid #1c1917;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 10px;
+  background: #f97316;
+  /* Orange-500 */
+  border-radius: 9999px;
+  border: 2px solid #000000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  background: #ea580c;
+  /* Orange-600 */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f97316 #000000;
 }
 
 .text-gradient {

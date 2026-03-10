@@ -38,14 +38,14 @@ const Footer = () => {
     return (
         <footer className="relative bg-black border-t border-white/5 pt-32 pb-12 px-6 overflow-hidden">
             {/* Background Glow */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-accent-green/5 blur-[120px] rounded-full -z-10 translate-y-1/2"></div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-orange-500/5 blur-[120px] rounded-full -z-10 translate-y-1/2"></div>
 
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-24">
                     {/* Brand Info */}
                     <div className="lg:col-span-2 space-y-8">
                         <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-accent-green rounded-xl flex items-center justify-center">
+                            <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
                                 <span className="text-black font-black text-2xl">D</span>
                             </div>
                             <span className="text-2xl font-black tracking-tighter text-white uppercase">Dora Intelligence</span>
@@ -54,7 +54,7 @@ const Footer = () => {
                             Transforming human-computer interaction through local-first, autonomous reasoning. The future is personal, private, and powerful.
                         </p>
                         <div className="flex gap-6 pt-4">
-                            <a href="#" className="text-gray-500 hover:text-accent-green transition-colors">
+                            <a href="#" className="text-gray-500 hover:text-orange-500 transition-colors">
                                 <Twitter className="w-5 h-5" />
                             </a>
                             <a href="#" className="text-gray-500 hover:text-white transition-colors">

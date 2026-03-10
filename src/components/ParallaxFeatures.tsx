@@ -46,13 +46,13 @@ function DashPattern() {
                 <defs>
                     <pattern id="dash-pattern-vertical" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
                         {/* Vertical Accent Dash */}
-                        <line x1="10" y1="0" x2="10" y2="10" stroke="#00FF66" strokeWidth="4" strokeLinecap="round" />
+                        <line x1="10" y1="0" x2="10" y2="10" stroke="#f97316" strokeWidth="4" strokeLinecap="round" />
                         {/* Vertical Black Dash */}
                         <line x1="10" y1="20" x2="10" y2="30" stroke="#000000" strokeWidth="4" strokeLinecap="round" />
 
                         {/* Second Column Staggered */}
                         <line x1="30" y1="0" x2="30" y2="10" stroke="#000000" strokeWidth="4" strokeLinecap="round" />
-                        <line x1="30" y1="20" x2="30" y2="30" stroke="#00FF66" strokeWidth="4" strokeLinecap="round" />
+                        <line x1="30" y1="20" x2="30" y2="30" stroke="#f97316" strokeWidth="4" strokeLinecap="round" />
                     </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#dash-pattern-vertical)" />
@@ -89,8 +89,8 @@ function Card({ feature, index }: { feature: Feature; index: number }) {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <feature.icon className="w-32 h-32 text-white group-hover:text-accent-green transition-colors duration-500 relative z-10" strokeWidth={1} />
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <feature.icon className="w-32 h-32 text-white group-hover:text-orange-500 transition-colors duration-500 relative z-10" strokeWidth={1} />
                 </motion.div>
             </div>
 
@@ -105,7 +105,7 @@ function Card({ feature, index }: { feature: Feature; index: number }) {
                     </span>
 
                     <h3 className="text-3xl md:text-5xl font-black text-black mb-6 leading-tight tracking-tighter max-w-xl">
-                        <ScribbleUnderline variant="straight" scribbleColor="text-accent-green" className="text-black inline-block">
+                        <ScribbleUnderline variant="straight" scribbleColor="text-orange-500" className="text-black inline-block">
                             {feature.headline.split('.')[0]}
                         </ScribbleUnderline>.
                     </h3>
@@ -114,7 +114,7 @@ function Card({ feature, index }: { feature: Feature; index: number }) {
                         {feature.description}
                     </p>
 
-                    <button className={`mt-8 flex items-center gap-2 text-black font-bold hover:text-accent-green transition-colors text-sm uppercase tracking-widest ${isTextRight ? 'flex-row-reverse' : 'flex-row'}`}>
+                    <button className={`mt-8 flex items-center gap-2 text-black font-bold hover:text-orange-500 transition-colors text-sm uppercase tracking-widest ${isTextRight ? 'flex-row-reverse' : 'flex-row'}`}>
                         <span>See Scenario</span>
                         <ArrowUpRight strokeWidth={3} className="w-5 h-5" />
                     </button>
@@ -140,7 +140,7 @@ export default function ParallaxFeatures() {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-[clamp(3rem,8vw,80px)] font-black text-black tracking-tighter mb-6 leading-none">
-                        The <ScribbleUnderline scribbleColor="text-accent-green" className="text-black italic">Autonomous</ScribbleUnderline> Advantage.
+                        The <ScribbleUnderline scribbleColor="text-orange-500" className="text-black italic">Autonomous</ScribbleUnderline> Advantage.
                     </h2>
                     <p className="text-gray-500 text-xl md:text-2xl font-medium max-w-3xl mx-auto">
                         Three specific ways DORA transforms your workflow, entirely on-device.

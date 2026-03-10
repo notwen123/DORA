@@ -19,7 +19,7 @@ export default function DownloadPage() {
                     transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                     className="relative"
                 >
-                    <div className="absolute inset-x-0 top-0 h-64 bg-accent-green/20 blur-[100px] -z-10 rounded-full"></div>
+                    <div className="absolute inset-x-0 top-0 h-64 bg-orange-500/20 blur-[100px] -z-10 rounded-full"></div>
                     <h1 className="text-[clamp(3rem,12vw,140px)] font-black tracking-tighter leading-[0.85] mb-8">
                         Get DORA<br />for Desktop.
                     </h1>
@@ -45,7 +45,7 @@ export default function DownloadPage() {
                     </div>
                     <div>
                         <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Privacy Level</h5>
-                        <p className="text-3xl font-black text-accent-green">100% On-Device</p>
+                        <p className="text-3xl font-black text-orange-500">100% On-Device</p>
                     </div>
                     <div>
                         <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Build Hash</h5>
@@ -61,7 +61,7 @@ export default function DownloadPage() {
             <footer className="py-20 px-6 border-t border-white/5 text-center">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 bg-accent-green rounded-md flex items-center justify-center">
+                        <div className="w-6 h-6 bg-orange-500 rounded-md flex items-center justify-center">
                             <span className="text-black font-black text-sm">D</span>
                         </div>
                         <span className="font-bold tracking-tighter uppercase text-xs">Dora Intelligence</span>

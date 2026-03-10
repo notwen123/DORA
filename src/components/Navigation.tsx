@@ -31,7 +31,7 @@ const Navigation = () => {
                 )}
             >
                 <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-accent-green rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
                         <span className="text-black font-black text-xl">D</span>
                     </div>
                     <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
@@ -57,7 +57,7 @@ const Navigation = () => {
                 <div>
                     <Link
                         href="/download"
-                        className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold hover:bg-accent-green transition-all duration-300"
+                        className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold hover:bg-orange-500 transition-all duration-300"
                     >
                         Get Started
                     </Link>

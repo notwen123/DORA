@@ -88,8 +88,8 @@ export const LovableHowItWorks = () => {
                 className="text-center z-10 mb-20 relative"
             >
                 <div className="flex items-center justify-center gap-2 mb-6">
-                    <Mic className="w-5 h-5 text-accent-green animate-pulse" />
-                    <span className="text-accent-green font-bold uppercase tracking-[0.2em] text-sm">Invisible Autonomy</span>
+                    <Mic className="w-5 h-5 text-orange-500 animate-pulse" />
+                    <span className="text-orange-500 font-bold uppercase tracking-[0.2em] text-sm">Invisible Autonomy</span>
                 </div>
                 <h2 className="text-[clamp(2.5rem,6vw,80px)] font-black tracking-tighter text-white mb-6 leading-[0.9]">
                     Just speak<br />Listen DORA
@@ -184,7 +184,7 @@ export const LovableHowItWorks = () => {
                                 className="flex items-center gap-4 px-6"
                             >
                                 <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                    <CheckCircle className="w-6 h-6 text-accent-green" />
+                                    <CheckCircle className="w-6 h-6 text-orange-500" />
                                 </div>
                                 <div className="flex flex-col text-left">
                                     <span className="text-white font-bold text-lg">Message Sent</span>
@@ -224,7 +224,7 @@ export const LovableHowItWorks = () => {
                 <a href="/download" className="group relative px-8 py-4 bg-white text-black font-black uppercase tracking-widest text-sm rounded-full overflow-hidden flex items-center gap-3 hover:scale-105 transition-transform duration-300">
                     <span className="relative z-10 group-hover:text-black transition-colors duration-300">Get DORA for Desktop</span>
                     <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 group-hover:text-black transition-all" />
-                    <div className="absolute inset-0 bg-accent-green translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+                    <div className="absolute inset-0 bg-orange-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
                 </a>
             </motion.div>
 

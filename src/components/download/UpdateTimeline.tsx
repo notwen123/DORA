@@ -51,7 +51,7 @@ const UpdateTimeline = () => {
                     >
                         <div className="absolute left-[-4px] top-2 flex items-center justify-center bg-black">
                             {event.status === "released" ? (
-                                <CheckCircle2 className="w-8 h-8 text-accent-green" />
+                                <CheckCircle2 className="w-8 h-8 text-orange-500" />
                             ) : (
                                 <Circle className={`w-8 h-8 ${event.status === "active" ? "text-apple-blue animate-pulse" : "text-gray-700"}`} strokeWidth={3} />
                             )}
@@ -62,7 +62,7 @@ const UpdateTimeline = () => {
                                 {event.date}
                             </span>
                             <h4 className="text-2xl font-black tracking-tight">{event.title}</h4>
-                            <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded border ${event.status === "released" ? "border-accent-green/30 text-accent-green" :
+                            <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded border ${event.status === "released" ? "border-orange-500/30 text-orange-500" :
                                 event.status === "active" ? "border-apple-blue/30 text-apple-blue" : "border-gray-800 text-gray-600"
                                 }`}>
                                 {event.version}

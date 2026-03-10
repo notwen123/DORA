@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export function ScribbleUnderline({
     children,
     className,
-    scribbleColor = "text-accent-green",
+    scribbleColor = "text-orange-500",
     variant = "curve"
 }: {
     children: React.ReactNode;

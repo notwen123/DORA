@@ -64,7 +64,7 @@ const DownloadButtons = () => {
                         )}
                     >
                         {item.recommended && (
-                            <span className="absolute -top-4 bg-accent-green text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+                            <span className="absolute -top-4 bg-orange-500 text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
                                 Recommended for you
                             </span>
                         )}
@@ -81,7 +81,7 @@ const DownloadButtons = () => {
                         <div className="mt-auto w-full space-y-4">
                             <button className={cn(
                                 "w-full py-4 rounded-full font-black flex items-center justify-center gap-2 transition-all active:scale-95 duration-300",
-                                item.recommended ? "bg-black text-white hover:bg-accent-green hover:text-black" : "bg-white text-black hover:bg-accent-green hover:text-black"
+                                item.recommended ? "bg-black text-white hover:bg-orange-500 hover:text-black" : "bg-white text-black hover:bg-orange-500 hover:text-black"
                             )}>
                                 <Download className="w-5 h-5" />
                                 Download
