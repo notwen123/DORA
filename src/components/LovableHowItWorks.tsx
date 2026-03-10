@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Mic, Sparkles, CheckCircle, ArrowRight, MessageSquare } from "lucide-react";
+import { ScribbleUnderline } from "./ScribbleUnderline";
 
 export const LovableHowItWorks = () => {
     const ref = useRef(null);
@@ -11,7 +12,7 @@ export const LovableHowItWorks = () => {
     const [step, setStep] = useState(0);
     const [typed, setTyped] = useState("");
 
-    const transcription = "Listen DORA, send a WhatsApp to John saying I'll be 10 minutes late.";
+    const transcription = "Listen DORA, draft a high-fidelity design for my next product.";
 
     useEffect(() => {
         if (!isInView) return;
@@ -77,8 +78,8 @@ export const LovableHowItWorks = () => {
     return (
         <section ref={ref} className="py-32 px-6 bg-black relative flex flex-col items-center overflow-hidden border-t border-white/5">
 
-            {/* Ambient Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-apple-blue/10 blur-[150px] rounded-full pointer-events-none"></div>
+            {/* Ambient Background Glow (Orange) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-orange-500/10 blur-[150px] rounded-full pointer-events-none"></div>
 
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -91,8 +92,9 @@ export const LovableHowItWorks = () => {
                     <Mic className="w-5 h-5 text-orange-500 animate-pulse" />
                     <span className="text-orange-500 font-bold uppercase tracking-[0.2em] text-sm">Invisible Autonomy</span>
                 </div>
-                <h2 className="text-[clamp(2.5rem,6vw,80px)] font-black tracking-tighter text-white mb-6 leading-[0.9]">
-                    Just speak<br />Listen DORA
+                <h2 className="text-[clamp(2.5rem,8vw,80px)] font-black tracking-tighter text-white mb-6 leading-[0.9]">
+                    Just speak<br />
+                    <ScribbleUnderline scribbleColor="text-orange-500">Listen DORA</ScribbleUnderline>
                 </h2>
                 <p className="text-xl md:text-2xl text-gray-400 font-medium max-w-2xl mx-auto leading-relaxed">
                     No complex UI. No terminals. Just say "Listen DORA" and let the world's most advanced AI assistant handle the rest.
@@ -131,7 +133,7 @@ export const LovableHowItWorks = () => {
                                 exit={{ opacity: 0, scale: 0.8 }}
                                 className="flex items-center gap-3"
                             >
-                                <div className="w-6 h-6 rounded-full bg-apple-blue shadow-[0_0_20px_rgba(0,102,204,0.8)]"></div>
+                                <div className="w-6 h-6 rounded-full bg-orange-500 shadow-[0_0_20px_rgba(249,115,22,0.8)]"></div>
                                 <span className="text-white/70 font-medium tracking-wide">DORA Idle</span>
                             </motion.div>
                         )}
@@ -147,13 +149,13 @@ export const LovableHowItWorks = () => {
                             >
                                 {/* Active Pulsing Orb */}
                                 <div className="relative w-12 h-12 flex items-center justify-center">
-                                    <div className="absolute inset-0 bg-apple-blue/30 rounded-full animate-ping"></div>
-                                    <div className="absolute inset-0 bg-apple-blue/50 rounded-full blur-[10px]"></div>
-                                    <div className="relative w-6 h-6 bg-apple-blue rounded-full shadow-[0_0_30px_rgba(0,102,204,1)]"></div>
+                                    <div className="absolute inset-0 bg-orange-500/30 rounded-full animate-ping"></div>
+                                    <div className="absolute inset-0 bg-orange-500/50 rounded-full blur-[10px]"></div>
+                                    <div className="relative w-6 h-6 bg-orange-500 rounded-full shadow-[0_0_30px_rgba(249,115,22,1)]"></div>
                                 </div>
                                 {/* Transcription Text */}
                                 <p className="text-white text-xl md:text-2xl font-medium tracking-tight text-center min-h-[32px]">
-                                    "{typed}"<span className="animate-pulse text-apple-blue">|</span>
+                                    "{typed}"<span className="animate-pulse text-orange-500">|</span>
                                 </p>
                             </motion.div>
                         )}
@@ -183,12 +185,12 @@ export const LovableHowItWorks = () => {
                                 transition={{ type: "spring", bounce: 0.5 }}
                                 className="flex items-center gap-4 px-6"
                             >
-                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                <div className="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center">
                                     <CheckCircle className="w-6 h-6 text-orange-500" />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-white font-bold text-lg">Message Sent</span>
-                                    <span className="text-white/50 text-sm">WhatsApp • John</span>
+                                    <span className="text-white font-bold text-lg">Action Executed</span>
+                                    <span className="text-white/50 text-sm">Drafting • Design System</span>
                                 </div>
                             </motion.div>
                         )}
