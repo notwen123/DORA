@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Terminal, MessageSquare, Code, Shield, Infinity, Zap, Cpu } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import VantaHero from "@/components/VantaHero";
-import ParallaxFeatures from "@/components/ParallaxFeatures";
+import About from "@/components/About";
 import Footer from "@/components/Footer";
 import { CinematicFrame } from "@/components/CinematicFrame";
 import { StickyBrain } from "@/components/StickyBrain";
@@ -31,8 +31,8 @@ export default function Home() {
       {/* Hero Section */}
       <VantaHero />
 
-      {/* CadPay-Inspired Parallax Glass Scenarios */}
-      <ParallaxFeatures />
+      {/* CadPay-Inspired Atmospheric About Section */}
+      <About />
 
       {/* Privacy Section */}
       <section id="privacy" className="py-48 px-6 bg-black flex flex-col items-center text-center">
