@@ -6,7 +6,7 @@
 - **Privacy-First**: 100% local processing using Mistral LLM (via Ollama).
 - **Autonomous Execution**: Integrates with 40+ platforms (WhatsApp, Slack, Browser, etc.).
 - **Voice Activated**: Simply say **"Listen DORA"** to start a task.
-- **Cross-Platform**: Designed for Windows, macOS, and Linux...
+- **Cross-Platform**: Designed for Windows, macOS, and Linux.
 
 ## 🏗️ Architecture
 1. **The Brain (Python)**: Reasoning and intent recognition.
