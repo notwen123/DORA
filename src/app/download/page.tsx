@@ -29,10 +29,10 @@ export default function DownloadPage() {
                 >
                     <div className="absolute inset-x-0 top-0 h-64 bg-orange-500/10 blur-[100px] -z-10 rounded-full"></div>
                     <h1 className="text-[clamp(3rem,12vw,140px)] font-black tracking-tighter leading-[0.85] mb-8">
-                        Get DORA<br />for <ScribbleUnderline scribbleColor="text-orange-500">Desktop</ScribbleUnderline>.
+                        Get SpaceOne<br />for <ScribbleUnderline scribbleColor="text-orange-500">Desktop</ScribbleUnderline>.
                     </h1>
                     <p className="text-xl md:text-3xl text-gray-400 font-medium max-w-3xl mx-auto leading-tight">
-                        The world's most advanced autonomous desktop assistant, running 100% locally on your machine.
+                        The free AI-native desktop IDE built to help developers understand, build, verify, and ship software.
                     </p>
                 </motion.div>
 
@@ -63,11 +63,11 @@ export default function DownloadPage() {
                     </div>
                     <div>
                         <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Engine</h5>
-                        <p className="text-3xl font-black italic">DORA Core</p>
+                        <p className="text-3xl font-black italic">SpaceOne Core</p>
                     </div>
                     <div>
-                        <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Privacy Level</h5>
-                        <p className="text-3xl font-black text-orange-500">100% On-Device</p>
+                        <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">AI Access</h5>
+                        <p className="text-3xl font-black text-orange-500">Free Managed AI</p>
                     </div>
                     <div>
                         <h5 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 mb-6">Build Hash</h5>

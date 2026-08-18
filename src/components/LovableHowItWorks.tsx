@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Mic, Sparkles, CheckCircle, ArrowRight, MessageSquare } from "lucide-react";
+import { Terminal, Sparkles, CheckCircle, ArrowRight, MessageSquare } from "lucide-react";
 import { ScribbleUnderline } from "./ScribbleUnderline";
 
 export const LovableHowItWorks = () => {
@@ -12,7 +12,7 @@ export const LovableHowItWorks = () => {
     const [step, setStep] = useState(0);
     const [typed, setTyped] = useState("");
 
-    const transcription = "Listen DORA, draft a high-fidelity design for my next product.";
+    const transcription = "Refactor authentication across the app, add tests, and verify the login flow.";
 
     useEffect(() => {
         if (!isInView) return;
@@ -89,15 +89,15 @@ export const LovableHowItWorks = () => {
                 className="text-center z-10 mb-20 relative"
             >
                 <div className="flex items-center justify-center gap-2 mb-6">
-                    <Mic className="w-5 h-5 text-orange-500 animate-pulse" />
-                    <span className="text-orange-500 font-bold uppercase tracking-[0.2em] text-sm">Invisible Autonomy</span>
+                    <Terminal className="w-5 h-5 text-orange-500 animate-pulse" />
+                    <span className="text-orange-500 font-bold uppercase tracking-[0.2em] text-sm">Intent to Shipped</span>
                 </div>
                 <h2 className="text-[clamp(2.5rem,8vw,80px)] font-black tracking-tighter text-white mb-6 leading-[0.9]">
-                    Just speak<br />
-                    <ScribbleUnderline scribbleColor="text-orange-500">Listen DORA</ScribbleUnderline>
+                    Just describe it<br />
+                    <ScribbleUnderline scribbleColor="text-orange-500">Tell SpaceOne</ScribbleUnderline>
                 </h2>
                 <p className="text-xl md:text-2xl text-gray-400 font-medium max-w-2xl mx-auto leading-relaxed">
-                    No complex UI. No terminals. Just say "Listen DORA" and let the world's most advanced AI assistant handle the rest.
+                    The editor, agent, terminal, and browser stay right where they are. Describe the outcome and SpaceOne handles the rest.
                 </p>
             </motion.div>
 
@@ -134,7 +134,7 @@ export const LovableHowItWorks = () => {
                                 className="flex items-center gap-3"
                             >
                                 <div className="w-6 h-6 rounded-full bg-orange-500 shadow-[0_0_20px_rgba(249,115,22,0.8)]"></div>
-                                <span className="text-white/70 font-medium tracking-wide">DORA Idle</span>
+                                <span className="text-white/70 font-medium tracking-wide">SpaceOne Idle</span>
                             </motion.div>
                         )}
 
@@ -189,8 +189,8 @@ export const LovableHowItWorks = () => {
                                     <CheckCircle className="w-6 h-6 text-orange-500" />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-white font-bold text-lg">Action Executed</span>
-                                    <span className="text-white/50 text-sm">Drafting • Design System</span>
+                                    <span className="text-white font-bold text-lg">Verified & Shipped</span>
+                                    <span className="text-white/50 text-sm">4 files changed • Tests passing</span>
                                 </div>
                             </motion.div>
                         )}
@@ -224,7 +224,7 @@ export const LovableHowItWorks = () => {
                 className="mt-16 z-10"
             >
                 <a href="/download" className="group relative px-8 py-4 bg-white text-black font-black uppercase tracking-widest text-sm rounded-full overflow-hidden flex items-center gap-3 hover:scale-105 transition-transform duration-300">
-                    <span className="relative z-10 group-hover:text-black transition-colors duration-300">Get DORA for Desktop</span>
+                    <span className="relative z-10 group-hover:text-black transition-colors duration-300">Get SpaceOne for Desktop</span>
                     <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 group-hover:text-black transition-all" />
                     <div className="absolute inset-0 bg-orange-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
                 </a>

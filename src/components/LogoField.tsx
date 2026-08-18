@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import Image from 'next/image';
 
-const LOGO_TYPES = ['dora', 'kaspa', 'cadpay'] as const;
+const LOGO_TYPES = ['spaceone'] as const;
 
 interface LogoItem {
     id: number;
@@ -152,22 +152,9 @@ function DriftingLogo({ item, mouseX, mouseY }: { item: LogoItem; mouseX: any; m
                 transition: { duration: 0.3 }
             }}
         >
-            {item.type === 'dora' && (
+            {item.type === 'spaceone' && (
                 <div style={{ width: item.size, height: item.size }} className="relative">
-                    <Image src="/icon.svg" alt="DORA" fill sizes="(max-width: 768px) 50px, 80px" className="object-contain grayscale opacity-60" />
-                </div>
-            )}
-            {item.type === 'kaspa' && (
-                <div style={{ width: item.size, height: item.size }} className="relative">
-                    <Image src="/kaspa-icon.png" alt="Kaspa" fill sizes="(max-width: 768px) 50px, 80px" className="opacity-30 object-contain" />
-                </div>
-            )}
-            {item.type === 'cadpay' && (
-                <div
-                    style={{ width: item.size, height: item.size }}
-                    className="rounded-lg bg-orange-500/5 flex items-center justify-center backdrop-blur-[1px] border border-orange-500/5"
-                >
-                    <span className="font-black italic text-orange-500/30" style={{ fontSize: item.size * 0.6 }}>C</span>
+                    <Image src="/icon.svg" alt="SpaceOne" fill sizes="(max-width: 768px) 50px, 80px" className="object-contain grayscale opacity-60" />
                 </div>
             )}
         </motion.div>

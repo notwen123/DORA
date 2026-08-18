@@ -18,7 +18,7 @@ const Footer = () => {
         {
             title: "Company",
             links: [
-                { name: "About DORA", href: "#" },
+                { name: "About SpaceOne", href: "#" },
                 { name: "Mission", href: "#" },
                 { name: "Security", href: "#" },
                 { name: "Contact", href: "#" },
@@ -46,12 +46,12 @@ const Footer = () => {
                     <div className="lg:col-span-2 space-y-8">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                                <span className="text-black font-black text-2xl">D</span>
+                                <span className="text-black font-black text-2xl">S</span>
                             </div>
-                            <span className="text-2xl font-black tracking-tighter text-white uppercase">DORA Intelligence</span>
+                            <span className="text-2xl font-black tracking-tighter text-white uppercase">SpaceOne</span>
                         </div>
                         <p className="text-lg text-gray-500 font-medium max-w-sm leading-relaxed">
-                            Transforming human-computer interaction through local-first, autonomous reasoning. The future is personal, private, and powerful.
+                            The free AI-native desktop IDE built to help developers understand, build, verify, and ship software.
                         </p>
                         <div className="flex gap-6 pt-4">
                             <a href="#" className="text-gray-500 hover:text-orange-500 transition-colors">
@@ -86,7 +86,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-black uppercase tracking-widest text-gray-600">
                     <div className="flex flex-wrap justify-center md:justify-start gap-8">
-                        <span>© 2026 DORA INTELLIGENCE INC.</span>
+                        <span>© 2026 SPACEONE INC.</span>
                         <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
                         <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>

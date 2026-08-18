@@ -15,40 +15,40 @@ type Feature = {
     image: string;
 };
 
-const doraFeatures: Feature[] = [
+const spaceOneFeatures: Feature[] = [
     {
         id: 'architecture',
-        headline: 'Local Hybrid Architecture.',
-        description: 'DORA uses a revolutionary local-first architecture that leverages your machine\'s full compute power.',
-        fullDescription: 'Unlike cloud-based assistants, DORA runs directly on your hardware. By utilizing your native GPU and CPU, it eliminates latency and ensures that your intelligence is as fast as your hardware allows. No queues, no API limits, just pure local performance.',
+        headline: 'Managed AI, Zero Setup.',
+        description: 'SpaceOne routes every request to a managed provider — no API keys, no local model wrangling.',
+        fullDescription: 'Install SpaceOne, sign in, and start building. Provider abstraction lives behind the product boundary, and a managed failure is always surfaced as a managed failure — it never silently falls back to a local model.',
         image: '/features/blockdag-diagram.png'
     },
     {
         id: 'performance',
-        headline: 'Unprecedented Inference Speed.',
-        description: 'Execute workflows at the speed of thought with optimized on-device models.',
-        fullDescription: 'DORA is engineered for ultra-fast response times. Our customized local models are quantized specifically for consumer hardware, delivering near-instant text generation and tool execution. Experience an assistant that keeps up with your workflow, not the other way around.',
+        headline: 'Fast When Simple, Deep When Complex.',
+        description: 'Quick edits get an instant answer. Complex refactors get planning, execution, and verification.',
+        fullDescription: '"Rename this variable" should never trigger a seven-stage agent workflow. "Refactor authentication and add tests" legitimately needs one. SpaceOne adapts the ceremony to the task instead of forcing every request through the same pipeline.',
         image: '/features/throughput.png'
     },
     {
         id: 'security',
-        headline: 'Hermetic Security Model.',
-        description: 'Your data, your keys, your intelligence. DORA treats privacy as a non-negotiable standard.',
-        fullDescription: 'Every byte of data stays on your device. DORA uses an isolated execution environment, ensuring that sensitive documents, codebases, and conversations never touch a remote server. We provide true sovereignty in an era of invasive data harvesting.',
+        headline: 'Your Code Never Feeds Ads.',
+        description: 'Your code powers the agent. Your code does not power the advertising system.',
+        fullDescription: 'Source, diffs, terminal output, and AI reasoning are protected surfaces, off-limits to ad targeting. Advertising funds free managed AI without ever touching what you build.',
         image: '/features/utxo.png'
     },
     {
         id: 'ecosystem',
-        headline: 'Tool Integration Ecosystem.',
-        description: 'DORA connects seamlessly with your favorite desktop applications and development tools.',
-        fullDescription: 'From VS Code to Slack, DORA acts as a central hub for your productivity. It can read your context, manipulate files, and trigger actions across your entire OS, creating a unified autonomous workflow that feels like magic.',
+        headline: 'Terminal, Browser, and MCP — Built In.',
+        description: 'SpaceOne extends the terminal, Chromium browser, and MCP tooling you already rely on.',
+        fullDescription: 'The agent respects existing security boundaries, confirmation flows, and shell behavior. Browser automation and MCP tools become part of the agent\'s evidence system, not a bolted-on side panel.',
         image: '/features/tokens.png'
     },
     {
         id: 'philosophy',
-        headline: 'Decentralized Intelligence.',
-        description: 'Moving away from centralized cloud AI toward a future of distributed, personal intelligence.',
-        fullDescription: 'DORA is built on the belief that AI should be a personal utility, not a rented service. By empowering individuals to run their own intelligence, we foster a more decentralized and resilient technological landscape. High-performance AI shouldn\'t depend on a single company\'s uptime.',
+        headline: 'Verified, Not Just Generated.',
+        description: 'A finished task is either COMPLETED or COMPLETED — NOT VERIFIED. SpaceOne always tells you which.',
+        fullDescription: 'Type checks, linting, tests, and builds turn "done" into evidence. SpaceOne never claims verification it did not actually perform — the goal is developer trust, not a longer changelog.',
         image: '/features/pow.png'
     }
 ];
@@ -97,10 +97,10 @@ export default function CoreFeatures() {
                     variants={containerVariants}>
 
                     <motion.h2 variants={itemVariants} className="text-4xl md:text-6xl font-black text-zinc-900 tracking-tighter mb-4">
-                        Why <ScribbleUnderline className="text-zinc-900 italic" scribbleColor="text-orange-500">DORA?</ScribbleUnderline>
+                        Why <ScribbleUnderline className="text-zinc-900 italic" scribbleColor="text-orange-500">SpaceOne?</ScribbleUnderline>
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-zinc-700 text-base md:text-lg max-w-2xl mx-auto">
-                        The 5 Pillars of the Fastest Local Intelligence
+                        Build. Verify. Remember. Trust.
                     </motion.p>
                 </motion.div>
 
@@ -112,7 +112,7 @@ export default function CoreFeatures() {
                         viewport={{ once: true, amount: 0.1 }}
                         variants={cardContainerVariants}
                     >
-                        {doraFeatures.map((feature, index) => (
+                        {spaceOneFeatures.map((feature, index) => (
                             <Card
                                 key={feature.id}
                                 feature={feature}

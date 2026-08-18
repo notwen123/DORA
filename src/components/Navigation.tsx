@@ -32,10 +32,10 @@ const Navigation = () => {
             >
                 <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-                        <span className="text-black font-black text-xl">D</span>
+                        <span className="text-black font-black text-xl">S</span>
                     </div>
                     <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
-                        DORA
+                        SpaceOne
                     </Link>
                 </div>
 

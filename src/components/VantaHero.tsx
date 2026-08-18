@@ -66,10 +66,10 @@ export default function VantaHero({ startAnimation = true }: { startAnimation?: 
                         transition={{ delay: 0.2 }}
                         className="text-base md:text-2xl text-zinc-100 leading-loose md:leading-relaxed font-medium"
                     >
-                        The fastest and most powerful autonomous desktop intelligence ever built entirely locally. <br className="hidden md:block" />
-                        DORA leverages revolutionary
+                        The free AI-native desktop IDE built to help developers understand, build, verify, and ship software. <br className="hidden md:block" />
+                        SpaceOne pairs a real editor with a
                         <span className="relative inline-block mx-2 text-white font-bold z-10">
-                            On-Device AI
+                            managed AI agent
                             <svg className="absolute -bottom-2 -left-2 w-[120%] h-[140%] -z-10" viewBox="0 0 100 40" preserveAspectRatio="none">
                                 <motion.path
                                     d="M0,30 Q50,40 100,30"
@@ -84,7 +84,7 @@ export default function VantaHero({ startAnimation = true }: { startAnimation?: 
                                 />
                             </svg>
                         </span>
-                        to execute workflows at unprecedented speed.
+                        so you can ship with evidence, not just a claim of "done."
                     </motion.p>
                 </div>
 
@@ -97,7 +97,7 @@ export default function VantaHero({ startAnimation = true }: { startAnimation?: 
                 >
                     <a href="/download" className="group relative flex items-center justify-center gap-3 bg-zinc-900 hover:bg-zinc-800 text-white px-8 py-4 rounded-full text-lg font-bold border border-white/10 hover:border-orange-500/50 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(255,102,0,0.2)]">
                         <Terminal size={24} className="text-orange-500 group-hover:scale-110 transition-transform" />
-                        <span>Download DORA</span>
+                        <span>Download SpaceOne</span>
                         <div className="absolute inset-x-0 -bottom-px h-px bg-linear-to-r from-transparent via-orange-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
                 </motion.div>

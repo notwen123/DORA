@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DORA - Intelligence that Acts",
-  description: "The world's first truly autonomous, local-first AI assistant.",
+  title: "SpaceOne — Build for free. Ship with confidence.",
+  description: "The free AI-native desktop IDE built to help developers understand, build, verify, and ship software.",
 };
 
 export default function RootLayout({

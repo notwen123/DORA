@@ -7,23 +7,23 @@ import { ChevronRight, Circle, CheckCircle2 } from "lucide-react";
 const events = [
     {
         version: "v1.2.4 (Current)",
-        title: "The Voice-to-Action Update",
+        title: "Mission Control",
         date: "Mar 2026+",
-        description: "Launched the seamless desktop widget with real-time transcription and autonomous app execution.",
-        status: "released",
-    },
-    {
-        version: "v1.3.0",
-        title: "Visual Context Engine",
-        date: "Late Apr 2026+",
-        description: "Adding support for screen-aware reasoning. DORA will be able to see and interact with UI elements.",
+        description: "Execution timeline, approval surface, and file-change summaries — turning chat into a real orchestration surface.",
         status: "active",
     },
     {
+        version: "v1.3.0",
+        title: "SpaceOne Verify",
+        date: "Late Apr 2026+",
+        description: "Type checks, linting, tests, and builds become first-class evidence — not just a claim of \"done.\"",
+        status: "planned",
+    },
+    {
         version: "v2.0.0",
-        title: "The Multi-Node Brain",
+        title: "Project Brain",
         date: "Q3 2026+",
-        description: "Distributed local reasoning across multiple machines for extreme performance.",
+        description: "Structured project memory — architecture, conventions, and decisions — without an uncontrolled transcript dump.",
         status: "planned",
     },
 ];

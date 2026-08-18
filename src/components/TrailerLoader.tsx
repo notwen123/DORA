@@ -77,18 +77,18 @@ export default function TrailerLoader({ onComplete }: { onComplete: () => void }
                     className="w-16 h-16 sm:w-20 sm:h-20 bg-orange-500 rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(249,115,22,0.4)]"
                 >
                     <span className="text-black font-black text-4xl sm:text-5xl select-none pt-1">
-                        D
+                        S
                     </span>
                 </motion.div>
 
-                {/* TEXT "DORA" - Slides in from Right */}
+                {/* TEXT "SPACEONE" - Slides in from Right */}
                 <motion.div
                     initial={{ x: 60, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <span className="text-4xl sm:text-5xl font-black text-white tracking-tighter">
-                        DORA
+                        SpaceOne
                     </span>
                 </motion.div>
             </motion.div>

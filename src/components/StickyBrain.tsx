@@ -43,29 +43,29 @@ export const StickyBrain = () => {
                             <span className="text-gray-500">Everything.</span>
                         </h2>
                         <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
-                            DORA processes your entire context locally. No cloud. No latency.
+                            SpaceOne understands your repository before it touches a single file.
                         </p>
                     </motion.div>
 
                     {/* Item 2 */}
                     <motion.div variants={item} className="pr-6">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9] mb-4">
-                            Reason<br />
+                            Build<br />
                             <span className="text-orange-500">Faster.</span>
                         </h2>
                         <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
-                            Leveraging 4-bit quantization for 60+ tokens/sec on consumer hardware.
+                            Free managed AI, tool calling, and multi-file edits — no API keys to configure.
                         </p>
                     </motion.div>
 
                     {/* Item 3 */}
                     <motion.div variants={item} className="pr-6">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9] mb-4">
-                            Execute<br />
-                            <span className="text-apple-blue">Perfectly.</span>
+                            Verify<br />
+                            <span className="text-apple-blue">Everything.</span>
                         </h2>
                         <p className="text-lg md:text-xl text-gray-400 font-medium max-w-md leading-relaxed">
-                            Voice-to-Action pipeline and 40+ app integrations turn intent into action instantly.
+                            Tests, type checks, linting, and browser checks turn "done" into evidence.
                         </p>
                     </motion.div>
 
@@ -87,7 +87,7 @@ export const StickyBrain = () => {
                         <div className="absolute inset-0 animate-pulse-slow">
                             <img
                                 src="/3d_images/orb.png"
-                                alt="DORA Core"
+                                alt="SpaceOne Core"
                                 className="w-full h-full object-contain pointer-events-none drop-shadow-[0_0_80px_rgba(0,102,204,0.6)]"
                             />
                         </div>
